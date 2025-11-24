@@ -1,0 +1,13 @@
+---
+const { link = "#", linktext = "Button", variant = "default" } = Astro.props;
+const variants = {
+  default:
+    "w-full xs:w-auto inline-block px-[18px] py-3 rounded-lg border border-gray-300 shadow-sm hover:bg-gray-200 font-semibold",
+  primary:
+    "w-full xs:w-auto inline-block px-[18px] py-3 rounded-lg bg-purple-800 text-white shadow-sm hover:bg-purple-900 font-semibold",
+};
+---
+
+<a href={link} target="_blank" class=`${variants[variant]}`>
+  {linktext}
+</a>
