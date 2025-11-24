@@ -1,11 +1,38 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Testiram samo" description="Ovo je opis">
+  <section class="bg-gray-100 sm:py-24 py-16">
+    <Container
+      ><div class="flex flex-col items-center justify-center text-center gap-5">
+        <h1>Start your free trial</h1>
+        <p class="text-xl text-gray-700">
+          Join over 4,000+ startups already growing with Untitled.
+        </p>
+        <div
+          class="w-full flex flex-col items-center justify-center xs:flex-row gap-3 mt-3"
+        >
+          <a
+            href=""
+            class="w-full xs:w-auto inline-block px-[18px] py-3 rounded-lg
+ border border-gray-300 shadow-sm"
+          >
+            Learn more
+          </a>
+          <a
+            href=""
+            class="w-full xs:w-auto inline-block px-[18px] py-3 rounded-lg bg-purple-800 text-white shadow-sm"
+          >
+            Get started
+          </a>
+        </div>
+      </div>
+    </Container>
+  </section>
 </Layout>
